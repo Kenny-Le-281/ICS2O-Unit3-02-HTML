@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!-- ICS20-UnitX-YY-HTML-->
+<!-- ICS2O-Unit3-01-HTML-->
 <html lang="en-ca">
   <head>
     <meta charset="utf-8"
-    <meta name="description" content="Area, with JavaScript">
+    <meta name="description" content="Volume of a pyramid, with JavaScript">
     <meta name="keywords" content="mths, ics2o">
     <meta name="author" content="Kenny Le">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,10 +14,58 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-teal.min.css" />
     <link rel="stylesheet" href="./css/style.css">
-    <title>Area, with JavaScript</title>
+    <title>Volume of a pyramid, with JavaScript</title>
   </head>
   <body>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="./js/script.js"></script>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Volume of a pyramid with JS</span>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <img src="./img/pyramid.png" alt="pyramid" width="40%" height="auto" />
+        <h4>Formula for the volume of a pyramid</h4>
+        <h5>v = (l × w × h) / 3</h5>
+        <h4>Please input the measurements (cm):</h4>
+        <!-- Numeric Textfield -->
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="number" step=".01" id="pyramid-length">
+            <label class="mdl-textfield__label" for="pyramid-length">Length:</label>
+            <span class="mdl-textfield__error">Decimal is too long</span>
+          </div>
+        </form>
+        <!-- Numeric Textfield -->
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="number" step=".01" id="pyramid-width">
+            <label class="mdl-textfield__label" for="pyramid-width">Width:</label>
+            <span class="mdl-textfield__error">Decimal is too long</span>
+          </div>
+        </form>
+        <!-- Numeric Textfield -->
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="number" step=".01" id="pyramid-height">
+            <label class="mdl-textfield__label" for="pyramid-height">Height:</label>
+            <span class="mdl-textfield__error">Decimal is too long</span>
+          </div>
+        </form>
+        <!-- Raised button with ripple -->
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="calculate()">
+          Calculate
+        </button>
+        <br>
+        <br>
+        <p>
+          <div id="answers">
+            <div id="area"></div>
+          </div>
+        </p>
+      </main>
+    </div>
   </body>
 </html>
