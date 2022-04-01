@@ -18,5 +18,5 @@ function calculate () {
   const volume = (length * width * height) / 3
 
   // output
-  document.getElementById('volume').innerHTML = 'The volume of the pyramid is: ' + volume.toFixed(2) + ' cm²'
+  document.getElementById('volume').innerHTML = 'The volume of the pyramid is: ' + volume.toFixed(2) + ' cm³'
 }
